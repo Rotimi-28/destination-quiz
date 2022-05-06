@@ -1,6 +1,8 @@
 
 // import models
-const RANDOMTHING = require ('./Model.js')
+const User = require ('./User.js')
+const Options = require ('./Options.js')
+const Question = require ('./Question.js')
 
 
 ////////////////////////////////////////////
@@ -12,4 +14,4 @@ const RANDOMTHING = require ('./Model.js')
 
 
 // export all our models
-module.exports = { RANDOMTHING };
+module.exports = { User, Options, Question };
