@@ -9,7 +9,13 @@ const Question = require ('./Question.js')
 
 // create associations here
 
+Options.belongsTo(Question, {
+    foreignKey: 'question_id'
+});
 
+Question.hasMany(Options, {
+    foreignKey: 'question_id'
+})
 //////////////////////////////////////////////
 
 
