@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import router from Express.js
 const router = require('express').Router();
 
@@ -21,4 +22,9 @@ router.use('/users', userRoutes);
 
 
 // we must export this file so it can be attached in server.js
+=======
+const router = require('express').Router();
+
+
+>>>>>>> feature/db
 module.exports = router;
