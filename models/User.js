@@ -1,7 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
+
 const sequelize = require('../config/connection');
 
-class User extends Model {}
+class User extends Model {
+    // we are creating an instance method, to use on each instance of User
+    checkPassword(loginPw) {
+        // we use bcrypt's compare() method, and we are using 
+        // the synchronous version even though async is typically
+        // better for servers
+        // we pass in the plaintext password and the hashed password
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 User.init ( 
     {
@@ -32,6 +42,27 @@ User.init (
 
     },
     {
+        hooks: {
+            
+            // async prefixes the function that contains the async function
+            async beforeCreate(newUserData) {
+
+                // await prefixes the asynchronous function (.hash)
+                // value of response is assigned to password property of newUserData 
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                
+                // we return newUserData
+                return newUserData;
+            },
+
+            // we must hash the password in the PUT request as well
+            // use beforeUpdate() hook from Sequelize
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            }
+
+        },
         // pass in our imported sequelize connection (the direct connection to our database)
         sequelize,
         // don't automatically create createdAt/updatedAt timestamp fields
