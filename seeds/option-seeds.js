@@ -2,8 +2,7 @@ const { Options } = require('../models');
 
 const optionsData = [
     {
-        name: 'this is a test option',
-        question_id: 1
+        name: 'this is a test option'
     }]
 
 const seedOptions = () => Options.bulkCreate(optionsData);

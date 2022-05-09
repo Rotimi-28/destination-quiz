@@ -22,7 +22,7 @@ Options.init (
             allowNull: false
         },
         question_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'question',
