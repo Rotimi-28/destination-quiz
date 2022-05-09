@@ -18,9 +18,9 @@ const seedAll = async () => {
     console.log('\n----- QUESTIONS SEEDED -----\n');
   
     
-
     await seedOptions();
     console.log('\n----- OPTIONS SEEDED -----\n');
+    
   
   
   
@@ -28,3 +28,4 @@ const seedAll = async () => {
 };
   
 seedAll();
+
