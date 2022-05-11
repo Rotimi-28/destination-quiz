@@ -8,7 +8,7 @@ const userRoutes = require('./user-routes.js');
 
 const optionRoutes = require('./option-routes');
 
-const questionRoutes = require('./option-routes');
+const questionRoutes = require('./question-routes');
 ///////////////////////////////////////////
 
 

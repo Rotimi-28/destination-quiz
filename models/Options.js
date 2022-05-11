@@ -23,13 +23,14 @@ Options.init (
         },
         question_id: {
             type: DataTypes.INTEGER,
+            defaultValue: 1,
             allowNull: false,
             references: {
                 model: 'question',
                 key: 'id'
             }
             
-        }
+        } 
 
     },
     {
