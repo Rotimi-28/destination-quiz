@@ -1,11 +1,33 @@
-<h1>THIS IS THE QUIZ ENDPOINT</h1>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Tech News</title>
+  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+</head>
+<nav>
+    <div class="wrap-sec">
+      {{{ body }}}
+    </nav>
+
+    <h1>
+   <a>THIS IS THE HOMEPAGE ENDPOINT</a>
+    </h1>
+<div class="Ques-sec">
 {{#each questions as |question|}}
 <li>
     <p>{{question.question}}</p>
 
 </li>
 {{/each}}
+
+</div>
+
+</body>
+</html>
+
 
 <!-->{{#each options as |option|}}
 <li>
