@@ -8,10 +8,10 @@ const questionsData = [
         question: 'What kind of weather do you like?'
     },
     {
-        question: 'What kind of scenery do you want to see?'
+        question: 'How do you like to travel?'
     },
     {
-        question: 'How do you like your accomodations?'
+        question: 'How do you like your accommodations?'
     }]
 
 const seedQuestions = () => Question.bulkCreate(questionsData);

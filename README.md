@@ -36,8 +36,15 @@
 None found.
 
 
-## Stock image provided by:
-* 
+## Image provided by:
+* [Pixabay.com]https://www.ncei.noaa.gov/news/weather-vs-climate
+* [@lvnatikk]https://unsplash.com/photos/-YHSwy6uqvk
+* [Regina Vaicekonyte](https://delos.com/resources/blog/travel-during-covid-19-exposure-risk-on-different-modes-of-transportation/)
+* [@wriopomba](https://unsplash.com/photos/Kmqog-irt-k)
+* [@srcharls](https://unsplash.com/photos/wt3disORDAg)
+* [@jezar](https://unsplash.com/photos/alY6_OpdwRQ)
+* [@rrebba](https://unsplash.com/photos/zunQwMy5B6M)
+* [@joey_csunyo](https://unsplash.com/photos/NwGMe-NuDm0)
 
 
 ## License
