@@ -35,9 +35,14 @@ router.get('/login', (req, res) => {
 router.get('/quiz', (req, res) => {
 
     Question.findAll({
+        include: [
+            {model: Options}
+        ]
 
     }).then(dbQuestionData => {
+        
         const questions = dbQuestionData.map(question => question.get({ plain:true}));
+        console.log(questions);
         res.render ('quiz', {questions});
     }).catch(err => {
         console.log(err);
@@ -61,7 +66,7 @@ router.get('/quiz', (req, res) => {
 router.get('/results', (req, res) => {
 
     res.render('results');
-    
+
 })
 
 /////////////////////////////////

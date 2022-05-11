@@ -1,14 +1,12 @@
 <h1>THIS IS THE QUIZ ENDPOINT</h1>
 
 {{#each questions as |question|}}
-<li>
-    <p>{{question.question}}</p>
-
-</li>
+<ul>
+    {{question.question}}
+    {{#each question.options as |option|}}
+    <li>{{option.option}}</li>
+    {{/each}}
+</ul>
 {{/each}}
 
-<!-->{{#each options as |option|}}
-<li>
-    <p>{{option.option}}</p>
-</li>
-{{/each}}<!-->
+
