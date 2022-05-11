@@ -1,1 +1,7 @@
 <h1>THIS IS THE HOMEPAGE ENDPOINT</h1>
+
+{{#each questions as |question|}}
+<li>
+    <p>{{question.question}}</p>
+</li>
+{{/each}}

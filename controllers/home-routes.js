@@ -12,9 +12,18 @@ const { Question, User, Options } = require('../models');
 
 router.get('/', (req, res) => {
 
+    Question.findAll({
+        
+    }).then(dbQuestionData => {
+        const questions = dbQuestionData.map(question => question.get({ plain:true}));
+        res.render ('homepage', {questions});
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
     // we will render our homepage template 
     // at the '/' endpoint
-    res.render ('homepage');
+    
 })
 
 
