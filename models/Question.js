@@ -17,7 +17,7 @@ Question.init (
             autoIncrement: true
         },
     
-        name: {
+        question: {
             type: DataTypes.STRING,
             allowNull: false
         },
