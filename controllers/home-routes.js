@@ -12,17 +12,7 @@ const { Question, User, Options } = require('../models');
 
 router.get('/', (req, res) => {
 
-    Question.findAll({
-        
-    }).then(dbQuestionData => {
-        const questions = dbQuestionData.map(question => question.get({ plain:true}));
-        res.render ('homepage', {questions});
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-    // we will render our homepage template 
-    // at the '/' endpoint
+    res.render('homepage');
     
 })
 
@@ -44,10 +34,36 @@ router.get('/login', (req, res) => {
 
 router.get('/quiz', (req, res) => {
 
+    Question.findAll({
 
-    res.render('quiz');
+    }).then(dbQuestionData => {
+        const questions = dbQuestionData.map(question => question.get({ plain:true}));
+        res.render ('quiz', {questions});
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+    
+    /*Options.findAll({
+
+    }).then(dbQuestionData => {
+        const options = dbOptionsData.map(options => options.get({ plain:true}));
+        res.render ('quiz', {options});
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });*/
+    
 });
 
 /////////////////////////////
+
+router.get('/results', (req, res) => {
+
+    res.render('results');
+    
+})
+
+/////////////////////////////////
 
 module.exports = router;
