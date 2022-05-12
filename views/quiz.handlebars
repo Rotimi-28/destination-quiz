@@ -4,9 +4,9 @@
 <div class="Ques-sec">
 {{#each questions as |question|}}
 <ul>
-    {{question.question}}
+    <h2>{{question.question}}</h2>
     {{#each question.options as |option|}}
-    <li>{{option.option}}</li>
+    <p class="btn btn-info option-btn" data-option-id={{this.id}} role="button">{{option.option}}</p>
     {{/each}}
 </ul>
 {{/each}}
@@ -15,3 +15,6 @@
 <button type="submit" class="btn btn-primary" href="/login">Sign up to find out your destination!</button>
 
 <script src="/assets/stylesheets/logout.js"></script>
+<a class="btn btn-primary btn-lg resultsBtn" role="button">Find out!</a>
+
+<script src="/assets/js/quiz.js"></script>

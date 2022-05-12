@@ -20,10 +20,7 @@ router.get('/', (req, res) => {
 /////////////////////////////
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+
     // we dont need 2nd argument for render method
     // because we dont need any variables
     res.render('login');
@@ -49,25 +46,36 @@ router.get('/quiz', (req, res) => {
         res.status(500).json(err);
     });
     
-    /*Options.findAll({
-
-    }).then(dbQuestionData => {
-        const options = dbOptionsData.map(options => options.get({ plain:true}));
-        res.render ('quiz', {options});
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });*/
     
 });
 
 /////////////////////////////
 
-router.get('/results', (req, res) => {
+router.get('/results1', (req, res) => {
 
-    res.render('results');
+    res.render('results1');
 
 })
+
+router.get('/results2', (req, res) => {
+
+    res.render('results2');
+
+})
+
+router.get('/results3', (req, res) => {
+
+    res.render('results3');
+
+})
+
+router.get('/results4', (req, res) => {
+
+    res.render('results4');
+
+})
+
+
 
 /////////////////////////////////
 

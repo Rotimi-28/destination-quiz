@@ -1,11 +1,15 @@
+
+
 async function loginFormHandler(event) {
+
     event.preventDefault();
   
     const user = document.querySelector('#username-login').value.trim();
+    
     const password = document.querySelector('#password-login').value.trim();
   
     if (user && password) {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('http://localhost:3001/api/users/login', {
         method: 'post',
         body: JSON.stringify({
           user,
@@ -15,21 +19,23 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/quiz');
       } else {
         alert(response.statusText);
       }
     }
   }
   
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('.login-btn').addEventListener('click', loginFormHandler);
 
 
 
 async function signupFormHandler(event) {
+
     event.preventDefault();
 
     const username = document.querySelector('#username-signup').value.trim();
+
 
 
     const password = document.querySelector('#password-signup').value.trim();
@@ -39,7 +45,7 @@ async function signupFormHandler(event) {
     // we create a new USER
     if (username && password) {
         // we assign await function to a variable, so we do not have to chain .then methods to fetch
-        const response = await fetch('/api/users', {
+        const response = await fetch('http://localhost:3001/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
@@ -50,10 +56,12 @@ async function signupFormHandler(event) {
         // check the response status
         if (response.ok) {
             console.log('success');
+            document.location.replace('/quiz');
+            
         } else {
             alert(response.statusText);
         };
     }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('.signup-btn').addEventListener('click', signupFormHandler);

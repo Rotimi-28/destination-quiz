@@ -34,27 +34,27 @@ const optionsData = [
         question_id: 2   
     },
     {
-        option: 'I like the city lights',
+        option: 'I want to see the city lights',
         question_id: 3   
     },
     {
-        option: 'I like to see the mountains',
+        option: 'I want to see the mountains',
         question_id: 3   
     },
     {
-        option: 'I like to see the ocean',
+        option: 'I want to see the ocean',
         question_id: 3   
     },
     {
-        option: 'I like to see the rainforest',
+        option: "I'd like to see the rainforests",
         question_id: 3   
     },
     {
-        option: 'I like the desert',
-        question_id: 3   
+        option: 'A 5-star resort',
+        question_id: 4   
     },
     {
-        option: '5 star resort',
+        option: 'A nice hotel',
         question_id: 4   
     },
     {
@@ -62,11 +62,7 @@ const optionsData = [
         question_id: 4   
     },
     {
-        option: 'Backpacking',
-        question_id: 4   
-    },
-    {
-        option: 'Air BnB',
+        option: 'Air BnBs',
         question_id: 4   
     }]
 
