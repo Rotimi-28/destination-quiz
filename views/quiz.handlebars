@@ -17,12 +17,15 @@
     </h1>
 <div class="Ques-sec">
 {{#each questions as |question|}}
-<li>
-    <p>{{question.question}}</p>
-
-</li>
+<ul>
+    {{question.question}}
+    {{#each question.options as |option|}}
+    <li>{{option.option}}</li>
+    {{/each}}
+</ul>
 {{/each}}
 
+<<<<<<< HEAD
 </div>
 
 </body>
@@ -34,3 +37,6 @@
     <p>{{option.option}}</p>
 </li>
 {{/each}}<!-->
+=======
+
+>>>>>>> 4903975837b773fadee556d9cb379c0b873097c5
