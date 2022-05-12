@@ -5,6 +5,12 @@
 <form class="login-form">
   <div class="user-log-sec" >
     <label for="username-login">username</label>
+
+
+<!-- we have our login form here -->
+<form class="login-form">
+  <div>
+    <label for="username-login">email:</label>
     <input type="text" id="username-login" />
   </div>
   <div class="pass-sec">
@@ -13,25 +19,34 @@
   </div>
   <div class="btn-sec d-flex justify-content-end">
     <button class="btn btn-info" type="submit">login</button>
+  <div>
+    <button type="submit" href="/login">login</button>
   </div>
 </form>
 
 <!-- and we have a sign up form here -->
-
 <form class="signup-form">
   <div class="user-sign-sec">
+  <div>
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
   </div>
-  <div class="pass">
+  <div>
+    <label for="email-signup">email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
     <label for="password-signup">password:</label>
     <input type="password" id="password-signup" />
   </div>
   <div class="submit-sgn d-flex justify-content-end">
     <button class="btn btn-primary" type="submit">signup</button>
+  <div>
+    <button type="submit">signup</button>
   </div>
 </form>
  </div>
 </div>
 
 <script src="/assets/js/login.js"></script>
+<script src="../public/assets/js/login.js"></script>
