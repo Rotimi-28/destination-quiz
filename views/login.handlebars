@@ -1,3 +1,10 @@
+<div class="row">
+  <div class="col-sm-12 d-flex justify-content-center">
+
+<!-- we have our login form here -->
+<form class="login-form">
+  <div class="user-log-sec" >
+    <label for="username-login">username</label>
 
 
 <!-- we have our login form here -->
@@ -6,10 +13,12 @@
     <label for="username-login">username:</label>
     <input type="text" id="username-login" />
   </div>
-  <div>
+  <div class="pass-sec">
     <label for="password-login">password:</label>
     <input type="password" id="password-login" />
   </div>
+  <div class="btn-sec d-flex justify-content-end">
+    <button class="btn btn-info" type="submit">login</button>
   <div>
     <a class="btn btn-primary btn-lg login-btn" role="button">login</a>
   </div>
@@ -17,6 +26,7 @@
 
 <!-- and we have a sign up form here -->
 <form class="signup-form">
+  <div class="user-sign-sec">
   <div>
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
@@ -25,9 +35,15 @@
     <label for="password-signup">password:</label>
     <input type="password" id="password-signup" />
   </div>
+  <div class="submit-sgn d-flex justify-content-end">
+    <button class="btn btn-primary" type="submit">signup</button>
   <div>
     <a class="btn btn-primary btn-lg signup-btn" role="button">signup</a>
   </div>
 </form>
+ </div>
+</div>
 
+<script src="/assets/js/login.js"></script>
+<script src="../public/assets/js/login.js"></script>
 <script src="/assets/js/login.js"></script>

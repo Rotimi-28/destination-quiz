@@ -1,7 +1,7 @@
-# second_project_dev
+# Aimless Travel
 ![GitHub license](https://img.shields.io/badge/license-MIT-ff69b4.svg)
 
-### This app can help you choose your next travel destination!
+### The app that can help you choose your next travel destination!
 
 ![screenshot](assets/images/screenshot.png)
 
@@ -28,7 +28,7 @@
 
 
 ## Features
-* Go to [insert web link here] and click "Login". 
+* Go to [insert web link here] and click "Start the Quiz". 
 * After that you will be asked to login or sign up. Your password is protected as you're typing it in.
 *  Just answer the questions based on your interest, and we will choose your next travel destination
 
@@ -37,8 +37,8 @@ None found.
 
 
 ## Image provided by:
-* [Pixabay.com]https://www.ncei.noaa.gov/news/weather-vs-climate
-* [@lvnatikk]https://unsplash.com/photos/-YHSwy6uqvk
+* [Pixabay.com](https://www.ncei.noaa.gov/news/weather-vs-climate)
+* [@lvnatikk](https://unsplash.com/photos/-YHSwy6uqvk)
 * [Regina Vaicekonyte](https://delos.com/resources/blog/travel-during-covid-19-exposure-risk-on-different-modes-of-transportation/)
 * [@wriopomba](https://unsplash.com/photos/Kmqog-irt-k)
 * [@srcharls](https://unsplash.com/photos/wt3disORDAg)
@@ -55,7 +55,6 @@ This project is licensed under the MIT license.
 ## Contributors
 * Stephen Dickey [@StephenWDickey](https://github.com/StephenWDickey)
 * Ellyse Carter [@ellysecarter](https://github.com/ellysecarter)
-* Devin Alcazar [@Devinalc](https://github.com/Devinalc)
 * Rotimi Amao [@Rotimi-28](https://github.com/Rotimi-28)
 
 ## Questions?
