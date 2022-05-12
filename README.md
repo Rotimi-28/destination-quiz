@@ -45,6 +45,7 @@ None found.
 * [@jezar](https://unsplash.com/photos/alY6_OpdwRQ)
 * [@rrebba](https://unsplash.com/photos/zunQwMy5B6M)
 * [@joey_csunyo](https://unsplash.com/photos/NwGMe-NuDm0)
+* [Kristjan Kotar](https://unsplash.com/photos/-h15p84GY5k)
 
 
 ## License
