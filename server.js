@@ -72,7 +72,7 @@ app.use(express.urlencoded({ extended: true }));
 // takes contents of a folder and:
 // 'serves them as static assets'
 // in this case these are our front-end files
-app.use(express.static(path.join(__dirname, '/public/')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 ////////////////////////////////////////////////////////////////
 

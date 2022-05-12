@@ -98,7 +98,7 @@ router.post('/login', (req, res) => {
 
         where: {
 
-            username: req.body.username
+            username: req.body.user
         }
     })
         // we take data from findOne() Sequelize method   
@@ -138,7 +138,7 @@ router.post('/login', (req, res) => {
             
 
 
-    });
+    }); //I think, .catch needs to be add to all the routes in order to be able to handed over the errors. 
 
 });
 
