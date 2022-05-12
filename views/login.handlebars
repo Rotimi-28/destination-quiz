@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<div class="col-3 justify-content-md-center">
-<form class = 'login-form'>
-  <div class="mb-6">
-    <label for="email-login" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-6">
-    <label for="password-login" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password-login">
-=======
+
+
 <!-- we have our login form here -->
 <form class="login-form">
-  <div class="user-log">
-    <label for="username-login">username</label>
+  <div>
+    <label for="username-login">email:</label>
     <input type="text" id="username-login" />
   </div>
   <div>
@@ -21,28 +11,27 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button type="submit" href="/login">login</button>
   </div>
 </form>
 
 <!-- and we have a sign up form here -->
-
 <form class="signup-form">
-  <div class="user-sign">
+  <div>
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
   </div>
-  <div class="pass">
+  <div>
+    <label for="email-signup">email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
     <label for="password-signup">password:</label>
     <input type="password" id="password-signup" />
   </div>
-  <div class="submit-sgn">
+  <div>
     <button type="submit">signup</button>
->>>>>>> d5c487436f4f4c11e1f983a3a931bc8ab5f213b7
   </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-    <a class="btn btn-secondary" href="/signup" role="button">Sign Up</a>
 </form>
-</div>
 
-<script src="public/assets/js/login.js"></script>
+<script src="../public/assets/js/login.js"></script>
