@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     User.findAll({
         // we pass this into findAll() method
         // we don't return password info for security
-        attributes: { exclude: ['password']}
+        attributes: {}
     })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -28,7 +28,28 @@ router.get('/', (req, res) => {
 
 });
 
+///////////////////////////////////////////////
 
+router.get('/:id', (req, res) => {
+    User.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(404).json({
+                    message: 'No user found with this id'
+                });
+                return;
+            }
+            res.json(dbUserData);
+        })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json(err);
+            });
+});
 
 ///////////////////////////////////////
 
@@ -85,7 +106,7 @@ router.post('/login', (req, res) => {
             // if there is no matching email we send 400, bad request
             if (!dbUserData) {
 
-                res.status(400).json({ message: 'No user with that email address!' });
+                res.status(400).json({ message: 'Username does not match our records!' });
                 
                 return;
 
