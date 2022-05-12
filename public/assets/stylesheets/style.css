@@ -138,7 +138,10 @@
   }
   /* Hero style end */
   
-  
+  /* hover elements for quiz */
+  .option-btn:hover {
+    background-color: white;
+  }
   
   
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */

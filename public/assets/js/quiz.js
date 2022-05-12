@@ -6,58 +6,78 @@ const arrJapan = []
 
 const arrMexico = []
 
-const optionBtn = document.querySelector(".option-btn");
-const option = optionBtn.textContent;
+/////////////////////////////////////////////////////////////////////////////////////////////
 
-console.log(option)
+const option1 = document.querySelector('[data-option-id="1"]');
+const option2 = document.querySelector('[data-option-id="2"]');
+const option3 = document.querySelector('[data-option-id="3"]');
+const option4 = document.querySelector('[data-option-id="4"]');
 
-const optionCheck1 = function() {
-    
-    if (option === "I like burgers") {
-        arrUSA.push('x')
-        console.log('point for USA')
-    }
-    else if (option === "I like pasta") {
-        arrItaly.push('x')
-    }
-    else if (option === "I like sushi") {
-        arrJapan.push('x')
-    }
-    else if (option === "I like tacos") {
-        arrMexico.push('x')
-    }
+const optionBtn = document.querySelector('.option-btn')
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+const mexicoPush = function() {
+    arrMexico.push('x')
+    console.log('point for Mexico')
+    this.style.background = "white";
 }
 
+const japanPush = function() {
+    arrJapan.push('x')
+    console.log('point for Japan')
+}
 
-optionBtn.addEventListener("click", optionCheck1)
+const italyPush = function() {
+    arrItaly.push('x')
+    console.log('point for Italy')
+}
 
+const usaPush = function() {
+    arrUSA.push('x')
+    console.log('point for USA')
+}
+
+option1.addEventListener('click', mexicoPush, {once: true} )
+
+
+option2.addEventListener('click', japanPush, {once: true} )
+
+
+option3.addEventListener('click', italyPush, {once: true} )
+
+
+option4.addEventListener('click', usaPush, {once: true} )
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
 
 const compareArrays = function() {
     
     if (arrUSA.length > arrItaly.length && arrUSA.length > arrJapan.length && arrUSA.length > arrMexico.length ) {
-        window.alert('array 1 is the longest')
+        window.alert('USA has most points')
 
     }
     else if (arrItaly.length > arrUSA.length && arrItaly.length > arrJapan.length && arrItaly.length > arrMexico.length ) {
         
-        window.alert('array 2 is the longest')
+        window.alert('Italy has most points')
 
     }
     else if (arrJapan.length > arrItaly.length && arrJapan.length > arrUSA.length && arrJapan.length > arrMexico.length ) {
         
-        window.alert('array 3 is the longest')
+        window.alert('Japan has most points')
 
     }
     else if (arrMexico.length > arrItaly.length && arrMexico.length > arrJapan.length && arrMexico.length > arrUSA.length ) {
         
-        window.alert('array 4 is the longest')
+        window.alert('Mexico has most points')
 
     }
     
 }
 
 
-
+/////////////////////////////////////////////////////////////////
 
 const resultsBtn = document.querySelector(".resultsBtn");
 
