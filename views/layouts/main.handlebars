@@ -25,23 +25,7 @@
         </a>
         </h1>
     {{/if}}
-    <nav>
-    <ul>
-      {{#if loggedIn}}
-        <li>
-          {{!-- <a href="/dashboard">Dashboard</a> --}}
-          <a class="btn btn-primary" href="/dashboard" role="button">Dashboard</a>
-        </li>
-        <li>
-          <button id="logout" class="btn btn-secondary">Logout</button>
-        </li>
-        {{else}}
-        <li>
-          <a class ="btn btn-primary" href="views/login.handlebars" role="button">Login</a>
-        </li>
-      {{/if}}
-    </ul>
-    </nav>
+    
   </header>
    <!-- hero/jumbotron -->
   <section class="hero">
