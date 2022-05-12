@@ -3,6 +3,7 @@
 const User = require ('./User.js')
 const Options = require ('./Options.js')
 const Question = require ('./Question.js')
+const Picture = require ('./Picture.js')
 
 
 ////////////////////////////////////////////
@@ -16,8 +17,16 @@ Options.belongsTo(Question, {
 Question.hasMany(Options, {
     foreignKey: 'question_id'
 })
+
+Picture.belongsTo(Question, {
+    foreignKey: 'question_id'
+});
+
+Question.hasOne(Picture, {
+    foreignKey: 'question_id'
+})
 //////////////////////////////////////////////
 
 
 // export all our models
-module.exports = { User, Options, Question };
+module.exports = { User, Options, Question, Picture };

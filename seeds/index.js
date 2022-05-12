@@ -1,8 +1,10 @@
 const seedOptions = require('./option-seeds');
 const seedQuestions = require('./question-seeds');
 const seedUsers = require('./user-seeds');
+const seedPictures = require('./picture-seeds');
 
 const sequelize = require('../config/connection');
+
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
@@ -21,7 +23,9 @@ const seedAll = async () => {
     await seedOptions();
     console.log('\n----- OPTIONS SEEDED -----\n');
     
-  
+    
+    await seedPictures();
+    console.log('\n----- PICTURES SEEDED -----\n');
   
   
     process.exit(0);

@@ -64,6 +64,22 @@ const optionsData = [
     {
         option: 'Air BnBs',
         question_id: 4   
+    },
+    {
+        option: 'Margarita',
+        question_id: 5
+    },
+    {
+        option: 'Wine',
+        question_id: 5
+    },
+    {
+        option: 'Beer',
+        question_id: 5
+    },
+    {
+        option: 'Sake',
+        question_id: 5
     }]
 
 const seedOptions = () => Options.bulkCreate(optionsData);

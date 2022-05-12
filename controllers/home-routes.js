@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 const sequelize = require('../config/connection');
 
-const { Question, User, Options } = require('../models');
+const { Question, User, Options, Picture } = require('../models');
 
 /////////////////////////////////////////
 
@@ -33,7 +33,8 @@ router.get('/quiz', (req, res) => {
 
     Question.findAll({
         include: [
-            {model: Options}
+            {model: Options},
+            {model: Picture}
         ]
 
     }).then(dbQuestionData => {

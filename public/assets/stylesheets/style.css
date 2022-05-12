@@ -265,6 +265,9 @@ section {
   z-index: 9999;
 }
 
+.option-btn:hover {
+  color: white;
+}
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {

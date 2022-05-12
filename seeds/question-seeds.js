@@ -12,6 +12,9 @@ const questionsData = [
     },
     {
         question: 'How do you like your accommodations?'
+    },
+    {
+        question: "What are we sippin on this vacation?"
     }]
 
 const seedQuestions = () => Question.bulkCreate(questionsData);

@@ -27,6 +27,10 @@ const option13 = document.querySelector('[data-option-id="13"]');
 const option14 = document.querySelector('[data-option-id="14"]');
 const option15 = document.querySelector('[data-option-id="15"]');
 const option16 = document.querySelector('[data-option-id="16"]');
+const option17 = document.querySelector('[data-option-id="17"]');
+const option18 = document.querySelector('[data-option-id="18"]');
+const option19 = document.querySelector('[data-option-id="19"]');
+const option20 = document.querySelector('[data-option-id="20"]');
 
 const optionBtn = document.querySelector('.option-btn')
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,6 +107,19 @@ option15.addEventListener('click', italyPush, {once: true} )
 
 
 option16.addEventListener('click', usaPush, {once: true} )
+
+
+//question 5
+option17.addEventListener('click', mexicoPush, {once: true} )
+
+
+option18.addEventListener('click', italyPush, {once: true} )
+
+
+option19.addEventListener('click', usaPush, {once: true} )
+
+
+option20.addEventListener('click', japanPush, {once: true} )
 
 
 

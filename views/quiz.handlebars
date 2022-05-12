@@ -4,6 +4,11 @@
 {{#each questions as |question|}}
 <ul>
     <h2>{{question.question}}</h2>
+    {{#each question.picture as |picture|}}
+      
+      <img src ={{picture.image_path}}>
+      
+    {{/each}}
     {{#each question.options as |option|}}
     <p class="btn btn-info option-btn" data-option-id={{this.id}} role="button">{{option.option}}</p>
     {{/each}}
