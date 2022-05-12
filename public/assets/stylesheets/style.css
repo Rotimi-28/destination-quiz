@@ -104,7 +104,7 @@
   
   /* Hero style start */
   .hero {
-    background-image: url('assets/images/bg.jpg');
+    background-image: url('../images/bg.jpg');
     background-size: cover;
     display: flex;
     justify-content: flex-end;

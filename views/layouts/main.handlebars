@@ -14,10 +14,11 @@
   <header>
     {{#if loggedIn}}
     <h1 class="name">
-        <a href="/dashboard" style="text-decoration: none">
+        <a href="/" style="text-decoration: none">
             Aimless Travel
         </a>
     </h1>
+    <button id="logout" class="bg-danger">logout</button>
     {{else}}
        <h1 class="name">
         <a href="/" style="text-decoration: none">
@@ -36,9 +37,10 @@
   </main>
   <footer>
         © 2022 Aimless Travel
+        
   </footer>
   {{#if loggedIn}}
-  <button id="logout" class="bg-danger">LOGOUT</button>
+  
   <script src="/assets/js/logout.js"></script>
   {{/if}}
   

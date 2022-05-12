@@ -1,6 +1,7 @@
-
-    <h1>
-      <a>THIS IS THE RESULTS ENDPOINT</a>
-    </h1>
-
-    </div>
+    {{#if loggedIn}}
+      <h1>You should go to:</h1>
+      
+    {{else}}
+      <h1>You should go to...</h1>
+      <a href="/login" class="btn btn-primary btn-lg" role="button">You must login or sign-up to see your Results!</a>
+    {{/if}}

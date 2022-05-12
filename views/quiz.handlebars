@@ -1,11 +1,11 @@
 <div class="Ques-sec">
 {{#each questions as |question|}}
 <ul>
-    {{question.question}}
+    <h2>{{question.question}}</h2>
     {{#each question.options as |option|}}
-    <li>{{option.option}}</li>
+    <p class="btn btn-info" role="button">{{option.option}}</p>
     {{/each}}
 </ul>
 {{/each}}
 
-<a href="/login" class="has-background-info">Sign in to find out!</a>
+<a href="/results" class="btn btn-primary btn-lg" role="button">Find out!</a>
