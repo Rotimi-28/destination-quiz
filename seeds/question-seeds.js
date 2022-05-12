@@ -8,7 +8,7 @@ const questionsData = [
         question: 'What kind of weather do you like?'
     },
     {
-        question: 'How do you like to travel?'
+        question: 'What would you like to see on your trip?'
     },
     {
         question: 'How do you like your accommodations?'

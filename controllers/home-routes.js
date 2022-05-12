@@ -54,11 +54,31 @@ router.get('/quiz', (req, res) => {
 
 /////////////////////////////
 
-router.get('/results', (req, res) => {
+router.get('/results1', (req, res) => {
 
-    res.render('results');
+    res.render('results1');
 
 })
+
+router.get('/results2', (req, res) => {
+
+    res.render('results2');
+
+})
+
+router.get('/results3', (req, res) => {
+
+    res.render('results3');
+
+})
+
+router.get('/results4', (req, res) => {
+
+    res.render('results4');
+
+})
+
+
 
 /////////////////////////////////
 
