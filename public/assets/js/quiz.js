@@ -40,16 +40,19 @@ const mexicoPush = function() {
 const japanPush = function() {
     arrJapan.push('x')
     console.log('point for Japan')
+    this.style.background = "white";
 }
 
 const italyPush = function() {
     arrItaly.push('x')
     console.log('point for Italy')
+    this.style.background = "white";
 }
 
 const usaPush = function() {
     arrUSA.push('x')
     console.log('point for USA')
+    this.style.background = "white";
 }
 
 

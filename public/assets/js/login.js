@@ -1,7 +1,11 @@
+
+
 async function loginFormHandler(event) {
+
     event.preventDefault();
   
     const user = document.querySelector('#username-login').value.trim();
+    
     const password = document.querySelector('#password-login').value.trim();
   
     if (user && password) {
@@ -15,23 +19,23 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/quiz');
       } else {
         alert(response.statusText);
       }
     }
   }
   
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('.login-btn').addEventListener('click', loginFormHandler);
 
 
 
 async function signupFormHandler(event) {
+
     event.preventDefault();
 
     const username = document.querySelector('#username-signup').value.trim();
 
-    console.log(username);
 
 
     const password = document.querySelector('#password-signup').value.trim();
@@ -52,10 +56,12 @@ async function signupFormHandler(event) {
         // check the response status
         if (response.ok) {
             console.log('success');
+            document.location.replace('/quiz');
+            
         } else {
             alert(response.statusText);
         };
     }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('.signup-btn').addEventListener('click', signupFormHandler);

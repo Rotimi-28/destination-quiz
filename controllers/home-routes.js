@@ -20,10 +20,7 @@ router.get('/', (req, res) => {
 /////////////////////////////
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+
     // we dont need 2nd argument for render method
     // because we dont need any variables
     res.render('login');
