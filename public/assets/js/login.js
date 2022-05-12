@@ -5,7 +5,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
   
     if (user && password) {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('http://localhost:3001/api/users/login', {
         method: 'post',
         body: JSON.stringify({
           user,
@@ -31,6 +31,8 @@ async function signupFormHandler(event) {
 
     const username = document.querySelector('#username-signup').value.trim();
 
+    console.log(username);
+
 
     const password = document.querySelector('#password-signup').value.trim();
 
@@ -39,7 +41,7 @@ async function signupFormHandler(event) {
     // we create a new USER
     if (username && password) {
         // we assign await function to a variable, so we do not have to chain .then methods to fetch
-        const response = await fetch('/api/users', {
+        const response = await fetch('http://localhost:3001/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,

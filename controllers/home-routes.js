@@ -49,15 +49,6 @@ router.get('/quiz', (req, res) => {
         res.status(500).json(err);
     });
     
-    /*Options.findAll({
-
-    }).then(dbQuestionData => {
-        const options = dbOptionsData.map(options => options.get({ plain:true}));
-        res.render ('quiz', {options});
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });*/
     
 });
 

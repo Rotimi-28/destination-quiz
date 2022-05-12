@@ -54,15 +54,6 @@ app.use(session(sess));
 ////////////////////////////////////////////////////////////
 
 
-// we establish handlebars as our template engine
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
-
-//////////////////////////////////////////////////////////////
-
-
-
 // middleware expressions
 // we use json data for req.body
 app.use(express.json());
@@ -75,6 +66,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public/')));
 
 ////////////////////////////////////////////////////////////////
+
+// we establish handlebars as our template engine
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+
+//////////////////////////////////////////////////////////////
+
+
+
+
 
 // turn on routes
 app.use(routes);
