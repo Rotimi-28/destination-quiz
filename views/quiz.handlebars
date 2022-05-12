@@ -3,9 +3,11 @@
 <ul>
     <h2>{{question.question}}</h2>
     {{#each question.options as |option|}}
-    <p class="btn btn-info" role="button">{{option.option}}</p>
+    <p class="btn btn-info option-btn" data-option-id={{this.id}} role="button">{{option.option}}</p>
     {{/each}}
 </ul>
 {{/each}}
 
-<a href="/results" class="btn btn-primary btn-lg" role="button">Find out!</a>
+<a href="/results" class="btn btn-primary btn-lg resultsBtn" role="button">Find out!</a>
+
+<script src="/assets/js/quiz.js"></script>
