@@ -124,6 +124,12 @@ section {
   justify-content: center;
 }
 
+.country-pic {
+    width: 1200px;
+   justify-content: center;
+    
+}
+
 /* .hero create-btn{
     margin: 5px;
     padding: 0;
