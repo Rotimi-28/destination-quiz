@@ -1,6 +1,7 @@
 
 ///////////////////////////////////////////////////
 
+// empty arrays for possible countries to visit
 const arrUSA = []
 
 const arrItaly = []
@@ -11,6 +12,8 @@ const arrMexico = []
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
+
+// select each posisble option 
 const option1 = document.querySelector('[data-option-id="1"]');
 const option2 = document.querySelector('[data-option-id="2"]');
 const option3 = document.querySelector('[data-option-id="3"]');
@@ -31,10 +34,13 @@ const option17 = document.querySelector('[data-option-id="17"]');
 const option18 = document.querySelector('[data-option-id="18"]');
 const option19 = document.querySelector('[data-option-id="19"]');
 const option20 = document.querySelector('[data-option-id="20"]');
+const option21 = document.querySelector('[data-option-id="21"]');
 
 const optionBtn = document.querySelector('.option-btn')
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+
+// add pics to quiz questions
 const pic1 = document.querySelector('[data-pic-id="1"]').src="/assets/images/food.jpeg";
 
 const pic2 = document.querySelector('[data-pic-id="2"]').src="/assets/images/weather.png";
@@ -47,10 +53,9 @@ const pic5 = document.querySelector('[data-pic-id="5"]').src="/assets/images/dri
 
 
 
-
-
 ///////////////////////////////////////////////////////////////////
 
+// functions to add points 
 const mexicoPush = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
@@ -75,6 +80,15 @@ const usaPush = function() {
     this.style.background = "white";
 }
 
+const noPush = function() {
+    console.log('no point pushed');
+    this.style.background = "white";
+}
+
+
+/////////////////////////////////////////////////////////
+
+// event listeners for options
 
 //question 1
 option1.addEventListener('click', mexicoPush, {once: true} )
@@ -138,6 +152,9 @@ option19.addEventListener('click', usaPush, {once: true} )
 option20.addEventListener('click', japanPush, {once: true} )
 
 
+option21.addEventListener('click', noPush, {once: true} )
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -151,7 +168,7 @@ var displayErrorModal = function () {
     var modal = document.getElementById("myModal");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close");
 
     modal.style.display = "flex";
 
@@ -168,9 +185,43 @@ var displayErrorModal = function () {
     }
 }
 
+var displayErrorModal2 = function () {
+    // When the user clicks on the button, open the modal
+    // mainDiv.classList.remove("has-background-dark");
+
+    // Get the modal
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close2");
+
+    modal2.style.display = "flex";
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+        modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+        modal2.style.display = "none";
+        }
+    }
+}
+
 const compareArrays = function() {
+
+    arrLengths = arrMexico.length + arrItaly.length + arrJapan.length + arrUSA.length; 
     
-    if (arrUSA.length > arrItaly.length && arrUSA.length > arrJapan.length && arrUSA.length > arrMexico.length ) {
+    if (arrLengths === 0) {
+        displayErrorModal();
+    }
+    else if ( arrLengths < 5 ) {
+        displayErrorModal2();
+        
+    }
+    else if (arrUSA.length > arrItaly.length && arrUSA.length > arrJapan.length && arrUSA.length > arrMexico.length ) {
         
         console.log('USA has most points')
         resultsBtn.href='/results1'
@@ -188,6 +239,7 @@ const compareArrays = function() {
         resultsBtn.href='/results3'
 
     }
+    
     else if (arrMexico.length > arrItaly.length && arrMexico.length > arrJapan.length && arrMexico.length > arrUSA.length ) {
         
         console.log('Mexico has most points')
@@ -195,9 +247,9 @@ const compareArrays = function() {
 
 
     }
-    else {
-        displayErrorModal();
-    }
+    
+   
+    
     
 }
 
