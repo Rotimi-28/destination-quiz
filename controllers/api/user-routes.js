@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 
-const { Question, User, Options } = require('../../models');
+const { User } = require('../../models');
 
 
 /////////////////////////////////////////
@@ -65,6 +65,7 @@ router.post('/', (req, res) => {
     //                      VALUES ("user", "password");
     User.create({
         username: req.body.username,
+        email: req.body.email,
         password: req.body.password
     })
     // we update .then callback with session info
@@ -138,7 +139,7 @@ router.post('/login', (req, res) => {
             
 
 
-    }); //I think, .catch needs to be add to all the routes in order to be able to handed over the errors. 
+    });  
 
 });
 
