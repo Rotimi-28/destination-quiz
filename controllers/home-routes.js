@@ -32,10 +32,9 @@ router.get('/login', (req, res) => {
 router.get('/quiz', (req, res) => {
 
     Question.findAll({
-        include: [
-            {model: Options},
-            {model: Picture}
-        ]
+        include: 
+            {model: Options}
+        
 
     }).then(dbQuestionData => {
         

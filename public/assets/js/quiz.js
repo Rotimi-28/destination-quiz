@@ -35,6 +35,22 @@ const option20 = document.querySelector('[data-option-id="20"]');
 const optionBtn = document.querySelector('.option-btn')
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+const pic1 = document.querySelector('[data-pic-id="1"]').src="/assets/images/food.jpeg";
+
+const pic2 = document.querySelector('[data-pic-id="2"]').src="/assets/images/weather.png";
+
+const pic3 = document.querySelector('[data-pic-id="3"]').src="/assets/images/sights.jpg";
+
+const pic4 = document.querySelector('[data-pic-id="4"]').src="/assets/images/accomodations.jpeg";
+
+const pic5 = document.querySelector('[data-pic-id="5"]').src="/assets/images/drinks.jpg";
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
+
 const mexicoPush = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
