@@ -76,6 +76,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// body parser middleware ///////
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 //////////////////////////////////////////////////////////////
 
