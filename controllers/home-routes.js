@@ -3,7 +3,10 @@ const router = require('express').Router();
 
 const sequelize = require('../config/connection');
 
-const { Question, User, Options, Picture } = require('../models');
+
+const { Question, User, Options} = require('../models');
+
+const authMiddleware = require('../utils/auth-middleware');
 
 /////////////////////////////////////////
 
@@ -29,7 +32,8 @@ router.get('/login', (req, res) => {
 
 ////////////////////////////
 
-router.get('/quiz', (req, res) => {
+router.get('/quiz', authMiddleware, (req, res) => {
+
 
     Question.findAll({
         include: 
@@ -39,8 +43,8 @@ router.get('/quiz', (req, res) => {
     }).then(dbQuestionData => {
         
         const questions = dbQuestionData.map(question => question.get({ plain:true}));
-        console.log(questions);
-        res.render ('quiz', {questions});
+        
+        res.render ('quiz', {questions, loggedIn:req.session.loggedIn});
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
