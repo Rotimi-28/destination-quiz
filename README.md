@@ -1,7 +1,7 @@
 # Aimless Travel
 ![GitHub license](https://img.shields.io/badge/license-MIT-ff69b4.svg)
 
-### The app that can help you choose your next travel destination!
+### The app is a simple quiz that can help you choose your next travel destination!
 
 ![screenshot](assets/images/screenshot.png)
 
@@ -24,7 +24,18 @@
 * JavaScript
 * Bootstrap
 * Handlebars
-* Node packages used: sequelize, express, express-session, express-handlebars, dotenv, path, dotenv, connect-session-sequelize, mysql2, bcrypt, nodemailer
+* Node packages used: 
+    * sequelize
+    * express
+    * express-session
+    * express-handlebars
+    * dotenv
+    * path
+    * dotenv
+    * connect-session-sequelize
+    * mysql2
+    * bcrypt
+    * nodemailer
 
 
 ## Features
