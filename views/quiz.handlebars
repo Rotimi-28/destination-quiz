@@ -4,7 +4,7 @@
 {{#each questions as |question|}}
 <ul class="text-center">
     <h2 class="quiz-question text-center">{{question.question}}</h2>
-    <img class="question-pic" data-pic-id="{{question.id}}" src=""></img>
+    <img class="question-pic" data-pic-id="{{question.id}}" alt="test" src=""/>
     {{#each question.options as |option|}}
     <p class="btn btn-info option-btn" data-option-id={{this.id}} role="button">{{option.option}}</p>
     {{/each}}
