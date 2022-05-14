@@ -165,10 +165,10 @@ var displayErrorModal = function () {
     // mainDiv.classList.remove("has-background-dark");
 
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.querySelector("#myModal");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close");
+    var span = document.querySelector(".close");
 
     modal.style.display = "flex";
 
@@ -190,10 +190,10 @@ var displayErrorModal2 = function () {
     // mainDiv.classList.remove("has-background-dark");
 
     // Get the modal
-    var modal2 = document.getElementById("myModal2");
+    var modal2 = document.querySelector("#myModal2");
 
     // Get the <span> element that closes the modal
-    var span2 = document.getElementsByClassName("close2");
+    var span2 = document.querySelector(".close2");
 
     modal2.style.display = "flex";
 

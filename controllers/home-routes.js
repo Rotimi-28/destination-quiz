@@ -15,7 +15,7 @@ const authMiddleware = require('../utils/auth-middleware');
 
 router.get('/', (req, res) => {
 
-    res.render('homepage');
+    res.render('homepage', {loggedIn:req.session.loggedIn});
     
 })
 
@@ -55,33 +55,33 @@ router.get('/quiz', authMiddleware, (req, res) => {
 
 /////////////////////////////
 
-router.get('/results1', (req, res) => {
+router.get('/results1', authMiddleware, (req, res) => {
 
-    res.render('results1');
-
-})
-
-router.get('/results2', (req, res) => {
-
-    res.render('results2');
+    res.render('results1', {loggedIn:req.session.loggedIn});
 
 })
 
-router.get('/results3', (req, res) => {
+router.get('/results2', authMiddleware, (req, res) => {
 
-    res.render('results3');
-
-})
-
-router.get('/results4', (req, res) => {
-
-    res.render('results4');
+    res.render('results2', {loggedIn:req.session.loggedIn});
 
 })
 
-router.get('/contact', (req, res) => {
+router.get('/results3', authMiddleware, (req, res) => {
 
-    res.render('contact');
+    res.render('results3', {loggedIn:req.session.loggedIn});
+
+})
+
+router.get('/results4', authMiddleware, (req, res) => {
+
+    res.render('results4', {loggedIn:req.session.loggedIn});
+
+})
+
+router.get('/contact', authMiddleware, (req, res) => {
+
+    res.render('contact', {loggedIn:req.session.loggedIn});
 
 })
 
