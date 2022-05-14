@@ -20,6 +20,11 @@ const sequelize = require('./config/connection');
 const path = require ('path');
 
 
+// require bodyparser and nodemailer for email
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
+
 // we import express-handlebars package
 const exphbs = require('express-handlebars');
 // we use the create() method of handlebars

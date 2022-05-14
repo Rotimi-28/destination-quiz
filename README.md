@@ -30,7 +30,8 @@
 ## Features
 * Go to [insert web link here] and click "Start the Quiz". 
 * After that you will be asked to login or sign up. Your password is protected as you're typing it in.
-*  Just answer the questions based on your interest, and we will choose your next travel destination
+* Just answer the questions based on your interest, and we will choose your next travel destination
+* Press "Click here for things to do!!" to be directed to a site that gives suggestions for your itinerary 
 
 ## Known Bugs
 None found.
