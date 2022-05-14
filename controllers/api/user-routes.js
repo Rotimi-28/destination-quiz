@@ -63,6 +63,7 @@ router.post('/', (req, res) => {
     // in our User model
     // this is like writing INSERT INTO users (username, email, password)
     //                      VALUES ("user", "password");
+    console.log(req.body);
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -72,9 +73,12 @@ router.post('/', (req, res) => {
     // req.session.save() initiates creation of session
     // then runs callback
         .then(dbUserData => {
+            console.log(dbUserData);
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
                 req.session.username = dbUserData.username;
+                req.session.email = dbUserData.email;
+            
                 req.session.loggedIn = true;
     
                 res.json(dbUserData);
@@ -89,6 +93,8 @@ router.post('/', (req, res) => {
 
 
 ////////////////////////////////////////////////
+
+
 
 
 
