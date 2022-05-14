@@ -24,7 +24,7 @@
 * JavaScript
 * Bootstrap
 * Handlebars
-* Node packages used: sequelize, express, express-session, express-handlebars, dotenv, path, dotenv, connect-session-sequelize, mysql2, bcrypt
+* Node packages used: sequelize, express, express-session, express-handlebars, dotenv, path, dotenv, connect-session-sequelize, mysql2, bcrypt, nodemailer
 
 
 ## Features
