@@ -42,9 +42,10 @@ https://blooming-escarpment-07246.herokuapp.com/
 ## Features
 * Go to https://blooming-escarpment-07246.herokuapp.com/ and click "Start the Quiz". 
 * After that you will be asked to login or sign up. Your password is protected as you're typing it in.
-* After that it will take you to our quiz page. Just answer the questions based on your interest, and we will choose your next travel destination
+* After that it will take you to our quiz page. Just answer the questions based on your interest and we will choose your next travel destination
 * Press "Click here for things to do!!" to be directed to a site that gives suggestions for your itinerary 
 * Press "Send me my results" to get an email of your results using nodemailer
+* Press "logout" at any time to start from scratch
 
 ## Known Bugs
 None found.

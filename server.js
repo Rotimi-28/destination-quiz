@@ -56,6 +56,8 @@ const sess = {
     })
 };
 
+
+
 app.use(session(sess));
 ////////////////////////////////////////////////////////////
 
@@ -82,7 +84,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.post('/send', (req, res) => {
-    // put body of email here
+    // put body of email here. need to finish writing out the email
     const output = `
     <p>You have a new travel destination!</p>
     <h3>You should go to: </h3>
@@ -93,6 +95,7 @@ app.post('/send', (req, res) => {
     <p></p>
     `;
 
+    
     // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: "smtp.mail.yahoo.com",
@@ -108,11 +111,13 @@ app.post('/send', (req, res) => {
     }
   });
 
+  const emailLink = document.getElementById('email')
+
   // send mail with defined transport object
   let sendResult = {
     from: '"Aimless Destination" <bootcamp484@yahoo.com>', 
     // not sure what to put for to send theyre entering this info on their own. could we make a span element and put it here?
-    to: "", // list of receivers
+    to: emailLink.value.trim(), // list of receivers
     subject: "Your Next Destination Awaits!",
     text: "Hello world?", // plain text body
     html: output //html body 
