@@ -51,6 +51,8 @@ const pic4 = document.querySelector('[data-pic-id="4"]').src="/assets/images/acc
 
 const pic5 = document.querySelector('[data-pic-id="5"]').src="/assets/images/drinks.jpg";
 
+const pic6 = document.querySelector('[data-pic-id="6"]').src="/assets/images/transportation.png";
+
 
 
 ///////////////////////////////////////////////////////////////////
@@ -348,7 +350,7 @@ const italyPush5 = function() {
 
 ///////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////
+
 
 const usaPush1 = function() {
     arrUSA.push('x')
@@ -451,6 +453,23 @@ const usaPush5 = function() {
 const noPush = function() {
     console.log('no point pushed');
     this.style.background = "white";
+    if (option17.style.background === 'white') {
+        option17.style.background = "";
+        arrMexico.pop();
+    }
+    else if (option18.style.background === 'white') {
+        option18.style.background = "";
+        arrItaly.pop();   
+    }
+    else if (option19.style.background === 'white') {
+        option19.style.background = "";
+        arrUSA.pop();
+    }
+    
+    else if (option20.style.background === 'white') {
+        option20.style.background = "";
+        arrJapan.pop();
+    }
 }
 
 
