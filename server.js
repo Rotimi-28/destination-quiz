@@ -39,6 +39,7 @@ const app = express();
 
 // we make our PORT variable OR 3001
 const PORT = process.env.PORT || 3001;
+app.set('port', PORT);
 
 
 const session = require('express-session');
