@@ -145,6 +145,7 @@ section {
    margin-left: auto;
    margin-right: auto;
    width: 50%;
+   border: 5px solid #96c7ca;
 }
 
 .link {
@@ -158,6 +159,13 @@ section {
    margin-right: auto;
    width: 50%;
   }
+
+.email-link {
+    text-align: center;
+    font-size: 40px;
+   margin-left: auto;
+   margin-right: auto;
+}
 
 
 /*-------------------------------------------------------------------*/  

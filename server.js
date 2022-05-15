@@ -80,6 +80,56 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.post('/send', (req, res) => {
+    // put body of email here
+    const output = `
+    <p>You have a new travel destination!</p>
+    <h3>You should go to: </h3>
+    <ul>
+    <li></li>
+    </ul>
+    <h3>Message</h3>
+    <p></p>
+    `;
+
+    // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.mail.yahoo.com",
+    port: 587,
+    service:'Yahoo',
+    secure: false,
+    auth: {
+      user: 'bootcamp484@yahoo.com',
+      pass: 'ntivmuugvxrkitfi'
+    },
+    tls:{
+        rejectUnauthorized:false
+    }
+  });
+
+  // send mail with defined transport object
+  let sendResult = {
+    from: '"Aimless Destination" <bootcamp484@yahoo.com>', 
+    to: "ellyseac@me.com", // list of receivers
+    subject: "Your Next Destination Awaits!",
+    text: "Hello world?", // plain text body
+    html: output //html body 
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(sendResult, (error, info) => {
+      if (error) {
+          return console.log(error);
+      } else{
+        console.log("Message sent: %s", info.messageId);
+        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+      }
+      
+
+      res.render('contact', {msg:'views/contact.handlebars'})
+  })
+});
+
 //////////////////////////////////////////////////////////////
 
 
