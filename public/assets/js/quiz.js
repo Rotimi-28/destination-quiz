@@ -247,8 +247,12 @@ const compareArrays = function() {
 
 
     }
+
+    else {
+        resultsBtn.href='/results'
+    }
     
-   
+
     
     
 }

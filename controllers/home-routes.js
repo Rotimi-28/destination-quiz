@@ -86,6 +86,12 @@ router.get('/contact', authMiddleware, (req, res) => {
 })
 
 
+router.get('/results', authMiddleware, (req, res) => {
+
+    res.render('results', {loggedIn:req.session.loggedIn});
+
+})
+
 
 /////////////////////////////////
 
