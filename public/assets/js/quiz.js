@@ -88,7 +88,18 @@ const noPush = function() {
 
 const clearOption = function() {
     if (optionBtn.style.background = "white") {
-        optionBtn.removeAttribute('background');
+        optionBtn.removeAttribute('style');
+    }
+}
+
+const clearArray1 = function() {
+    arrLengths = arrMexico.length + arrItaly.length + arrJapan.length + arrUSA.length;
+    if (arrLengths > 1) {
+        arrMexico.pop();
+        arrItaly.pop();
+        arrJapan.pop();
+        arrUSA.pop();
+        console.log('reset points');
     }
 }
 
@@ -99,7 +110,8 @@ const clearOption = function() {
 
 //question 1
 option1.addEventListener('click', clearOption);
-option1.addEventListener('click', mexicoPush, {once: true} )
+option1.addEventListener('click', clearArray1, {once: true});
+option1.addEventListener('click', mexicoPush, {once: true} );
 
 
 option2.addEventListener('click', japanPush, {once: true} )
