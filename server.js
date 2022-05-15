@@ -111,7 +111,8 @@ app.post('/send', (req, res) => {
   // send mail with defined transport object
   let sendResult = {
     from: '"Aimless Destination" <bootcamp484@yahoo.com>', 
-    to: "ellyseac@me.com", // list of receivers
+    // not sure what to put for to send theyre entering this info on their own. could we make a span element and put it here?
+    to: "", // list of receivers
     subject: "Your Next Destination Awaits!",
     text: "Hello world?", // plain text body
     html: output //html body 
