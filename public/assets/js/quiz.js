@@ -59,7 +59,7 @@ const pic5 = document.querySelector('[data-pic-id="5"]').src="/assets/images/dri
 const mexicoPush1 = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option2.style.background === 'white') {
         option2.style.background = "";
         arrJapan.pop();   
@@ -77,7 +77,7 @@ const mexicoPush1 = function() {
 const mexicoPush2 = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option5.style.background === 'white') {
         option5.style.background = "";
         arrItaly.pop();   
@@ -95,7 +95,7 @@ const mexicoPush2 = function() {
 const mexicoPush3 = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option9.style.background === 'white') {
         option9.style.background = "";
         arrUSA.pop();   
@@ -113,7 +113,7 @@ const mexicoPush3 = function() {
 const mexicoPush4 = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option14.style.background === 'white') {
         option14.style.background = "";
         arrJapan.pop();   
@@ -131,7 +131,7 @@ const mexicoPush4 = function() {
 const mexicoPush5 = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option18.style.background === 'white') {
         option18.style.background = "";
         arrItaly.pop();   
@@ -154,7 +154,7 @@ const mexicoPush5 = function() {
 const japanPush1 = function() {
     arrJapan.push('x')
     console.log('point for Japan')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option1.style.background === 'white') {
         option1.style.background = "";
         arrMexico.pop();   
@@ -172,7 +172,7 @@ const japanPush1 = function() {
 const japanPush2 = function() {
     arrJapan.push('x')
     console.log('point for Japan')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option5.style.background === 'white') {
         option5.style.background = "";
         arrItaly.pop();   
@@ -190,7 +190,7 @@ const japanPush2 = function() {
 const japanPush3 = function() {
     arrJapan.push('x')
     console.log('point for Japan')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option9.style.background === 'white') {
         option9.style.background = "";
         arrUSA.pop();   
@@ -210,7 +210,7 @@ const japanPush3 = function() {
 const japanPush4 = function() {
     arrJapan.push('x')
     console.log('point for Japan')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option13.style.background === 'white') {
         option13.style.background = "";
         arrMexico.pop();   
@@ -228,7 +228,7 @@ const japanPush4 = function() {
 const japanPush5 = function() {
     arrJapan.push('x')
     console.log('point for Japan')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option17.style.background === 'white') {
         option17.style.background = "";
         arrMexico.pop();
@@ -252,7 +252,7 @@ const japanPush5 = function() {
 const italyPush1 = function() {
     arrItaly.push('x')
     console.log('point for Italy')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option1.style.background === 'white') {
         option1.style.background = "";
         arrMexico.pop();   
@@ -270,7 +270,7 @@ const italyPush1 = function() {
 const italyPush2 = function() {
     arrItaly.push('x')
     console.log('point for Italy')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option8.style.background === 'white') {
         option8.style.background = "";
         arrJapan.pop();   
@@ -288,7 +288,7 @@ const italyPush2 = function() {
 const italyPush3 = function() {
     arrItaly.push('x')
     console.log('point for Italy')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option9.style.background === 'white') {
         option9.style.background = "";
         arrUSA.pop();   
@@ -308,7 +308,7 @@ const italyPush3 = function() {
 const italyPush4 = function() {
     arrItaly.push('x')
     console.log('point for Italy')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option13.style.background === 'white') {
         option13.style.background = "";
         arrMexico.pop();   
@@ -326,7 +326,7 @@ const italyPush4 = function() {
 const italyPush5 = function() {
     arrItaly.push('x')
     console.log('point for Italy')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option17.style.background === 'white') {
         option17.style.background = "";
         arrMexico.pop();
@@ -353,7 +353,7 @@ const italyPush5 = function() {
 const usaPush1 = function() {
     arrUSA.push('x')
     console.log('point for USA')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option1.style.background === 'white') {
         option1.style.background = "";
         arrMexico.pop();   
@@ -371,7 +371,7 @@ const usaPush1 = function() {
 const usaPush2 = function() {
     arrUSA.push('x')
     console.log('point for USA')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option8.style.background === 'white') {
         option8.style.background = "";
         arrJapan.pop();   
@@ -389,7 +389,7 @@ const usaPush2 = function() {
 const usaPush3 = function() {
     arrUSA.push('x')
     console.log('point for USA')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option11.style.background === 'white') {
         option11.style.background = "";
         arrItaly.pop();   
@@ -409,7 +409,7 @@ const usaPush3 = function() {
 const usaPush4 = function() {
     arrUSA.push('x')
     console.log('point for USA')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option13.style.background === 'white') {
         option13.style.background = "";
         arrMexico.pop();   
@@ -427,7 +427,7 @@ const usaPush4 = function() {
 const usaPush5 = function() {
     arrUSA.push('x')
     console.log('point for USA')
-    optionBtn.style.background = "white";
+    this.style.background = "white";
     if (option17.style.background === 'white') {
         option17.style.background = "";
         arrMexico.pop();
