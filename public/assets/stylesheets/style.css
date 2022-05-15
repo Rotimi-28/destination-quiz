@@ -163,8 +163,9 @@ section {
 .email-link {
     text-align: center;
     font-size: 40px;
-   margin-left: auto;
-   margin-right: auto;
+    display: block;
+    justify-content: center;
+   width: 100%;
 }
 
 
