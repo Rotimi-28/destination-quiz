@@ -110,7 +110,7 @@ const clearArray1 = function() {
 
 //question 1
 option1.addEventListener('click', () => {
-    clearOption();
+    //clearOption();
     clearArray1();
     mexicoPush();
  }, {once: true} );
