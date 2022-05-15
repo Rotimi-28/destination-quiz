@@ -56,10 +56,18 @@ const pic5 = document.querySelector('[data-pic-id="5"]').src="/assets/images/dri
 ///////////////////////////////////////////////////////////////////
 
 // functions to add points 
-const mexicoPush = function() {
+const mexicoPush1 = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    this.style.background = "white";
+    optionBtn.style.background = "white";
+    if (option2.style.background === 'white' || option3.style.background === 'white' || option4.style.background === "white") {
+        option2.style.background = "";
+        option3.style.background = "";
+        option4.style.background = "";
+        arrItaly.pop();
+        arrUSA.pop();
+        arrJapan.pop();
+    }
 }
 
 const japanPush = function() {
@@ -109,11 +117,7 @@ const clearArray1 = function() {
 // event listeners for options
 
 //question 1
-option1.addEventListener('click', () => {
-    clearOption();
-    clearArray1();
-    mexicoPush();
- }, {once: true} );
+option1.addEventListener('click', mexicoPush1, {once: true} );
 
 
 option2.addEventListener('click', japanPush, {once: true} )
