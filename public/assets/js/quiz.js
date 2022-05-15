@@ -35,6 +35,11 @@ const option18 = document.querySelector('[data-option-id="18"]');
 const option19 = document.querySelector('[data-option-id="19"]');
 const option20 = document.querySelector('[data-option-id="20"]');
 const option21 = document.querySelector('[data-option-id="21"]');
+const option22 = document.querySelector('[data-option-id="22"]');
+const option23 = document.querySelector('[data-option-id="23"]');
+const option24 = document.querySelector('[data-option-id="24"]');
+const option25 = document.querySelector('[data-option-id="25"]');
+
 
 const optionBtn = document.querySelector('.option-btn')
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -151,6 +156,24 @@ const mexicoPush5 = function() {
     }
 }
 
+const mexicoPush6 = function() {
+    arrMexico.push('x')
+    console.log('point for Mexico')
+    this.style.background = "white";
+    if (option23.style.background === 'white') {
+        option23.style.background = "";
+        arrJapan.pop();   
+    }
+    else if (option25.style.background === 'white') {
+        option25.style.background = "";
+        arrItaly.pop();
+    }
+    else if (option22.style.background === 'white') {
+        option22.style.background = "";
+        arrUSA.pop();
+    }
+}
+
 ////////////////////////////////////////////////////
 
 const japanPush1 = function() {
@@ -249,6 +272,24 @@ const japanPush5 = function() {
     }
 }
 
+const japanPush6 = function() {
+    arrJapan.push('x')
+    console.log('point for Japan')
+    this.style.background = "white";
+    if (option24.style.background === 'white') {
+        option24.style.background = "";
+        arrMexico.pop();   
+    }
+    else if (option25.style.background === 'white') {
+        option25.style.background = "";
+        arrItaly.pop();
+    }
+    else if (option22.style.background === 'white') {
+        option22.style.background = "";
+        arrUSA.pop();
+    }
+}
+
 ////////////////////////////////////////////////////
 
 const italyPush1 = function() {
@@ -344,6 +385,24 @@ const italyPush5 = function() {
     
     else if (option21.style.background === 'white') {
         option21.style.background = "";
+    }
+}
+
+const italyPush6 = function() {
+    arrItaly.push('x')
+    console.log('point for Italy')
+    this.style.background = "white";
+    if (option24.style.background === 'white') {
+        option24.style.background = "";
+        arrMexico.pop();   
+    }
+    else if (option23.style.background === 'white') {
+        option23.style.background = "";
+        arrJapan.pop();
+    }
+    else if (option22.style.background === 'white') {
+        option22.style.background = "";
+        arrUSA.pop();
     }
 }
 
@@ -448,6 +507,24 @@ const usaPush5 = function() {
     }
 }
 
+const usaPush4 = function() {
+    arrUSA.push('x')
+    console.log('point for USA')
+    this.style.background = "white";
+    if (option24.style.background === 'white') {
+        option24.style.background = "";
+        arrMexico.pop();   
+    }
+    else if (option23.style.background === 'white') {
+        option23.style.background = "";
+        arrJapan.pop();
+    }
+    else if (option25.style.background === 'white') {
+        option25.style.background = "";
+        arrItaly.pop();
+    }
+}
+
 /////////////////////////////////////////////
 
 const noPush = function() {
@@ -543,6 +620,19 @@ option20.addEventListener('click', japanPush5, {once: true} )
 
 
 option21.addEventListener('click', noPush, {once: true} )
+
+
+//question 6
+option22.addEventListener('click', usaPush6, {once: true} )
+
+
+option23.addEventListener('click', japanPush6, {once: true} )
+
+
+option24.addEventListener('click', mexicoPush6, {once: true} )
+
+
+option25.addEventListener('click', italyPush6, {once: true} )
 
 
 
