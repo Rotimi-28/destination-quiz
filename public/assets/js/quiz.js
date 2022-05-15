@@ -217,7 +217,7 @@ const compareArrays = function() {
     if (arrLengths === 0) {
         displayErrorModal();
     }
-    else if ( arrLengths < 5 ) {
+    else if ( arrLengths < 4 ) {
         displayErrorModal2();
         
     }
