@@ -3,7 +3,7 @@
 
 ### The app is a simple quiz that can help you choose your next travel destination!
 
-![screenshot](assets/images/screenshot.png)
+![screenshot](public/assets/images/screenshot.png)
 
 ## Deployed application:
 https://blooming-escarpment-07246.herokuapp.com/
