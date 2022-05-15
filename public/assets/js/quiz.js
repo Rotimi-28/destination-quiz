@@ -86,11 +86,19 @@ const noPush = function() {
 }
 
 
+const clearOption = function() {
+    if (optionBtn.style.background = "white") {
+        optionBtn.removeAttribute('background');
+    }
+}
+
+
 /////////////////////////////////////////////////////////
 
 // event listeners for options
 
 //question 1
+option1.addEventListener('click', clearOption);
 option1.addEventListener('click', mexicoPush, {once: true} )
 
 
