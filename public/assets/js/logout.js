@@ -1,5 +1,5 @@
 async function logout() {
-    const response = await fetch('http://localhost:3001/api/users/logout', {
+    const response = await fetch('https://blooming-escarpment-07246.herokuapp.com/api/users/logout', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' }
     });
