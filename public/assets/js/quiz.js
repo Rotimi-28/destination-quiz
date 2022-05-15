@@ -109,9 +109,11 @@ const clearArray1 = function() {
 // event listeners for options
 
 //question 1
-option1.addEventListener('click', clearOption);
-option1.addEventListener('click', clearArray1, {once: true});
-option1.addEventListener('click', mexicoPush, {once: true} );
+option1.addEventListener('click', () => {
+    clearOption();
+    clearArray1();
+    mexicoPush();
+ }, {once: true} );
 
 
 option2.addEventListener('click', japanPush, {once: true} )
