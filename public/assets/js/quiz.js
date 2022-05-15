@@ -59,7 +59,7 @@ const pic5 = document.querySelector('[data-pic-id="5"]').src="/assets/images/dri
 const mexicoPush = function() {
     arrMexico.push('x')
     console.log('point for Mexico')
-    this.style.background = "white";
+    optionBtn.style.background = "white";
 }
 
 const japanPush = function() {
