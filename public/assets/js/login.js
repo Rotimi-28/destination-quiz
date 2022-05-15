@@ -11,7 +11,7 @@ async function loginFormHandler(event) {
     
   
     if (user && password) {
-      const response = await fetch( 'http://blooming-escarpment-07246/api/users/login', {
+      const response = await fetch( 'https://blooming-escarpment-07246/api/users/login', {
         method: 'post',
         body: JSON.stringify({
           user,
@@ -51,7 +51,7 @@ async function signupFormHandler(event) {
     //we create a new USER
     if (username && password && email) {
         // we assign await function to a variable, so we do not have to chain .then methods to fetch
-        const response = await fetch('http://blooming-escarpment-07246/api/users', {
+        const response = await fetch('https://blooming-escarpment-07246/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
