@@ -111,7 +111,7 @@ app.post('/send', (req, res) => {
 
     let mailOptions = {
         from: "aimlesstravelapp@gmail.com",
-        to: `gmail.com`,
+        to: `stphndcky22gmail.com`,
         subject: 'Your results from Aimless Travel',
         text: 'Hello World',
         html: '<h1>Hello World</h1>'
