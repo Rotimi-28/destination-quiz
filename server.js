@@ -95,8 +95,13 @@ app.post('/send', (req, res) => {
         host: 'https://blooming-escarpment-07246.herokuapp.com/',
         port: 587,
         secure: false,
+        service: 'gmail',
         auth: {
-            user: 'aimlesstravelapp@gmail.com'
+            type: 'OAuth2',
+            user: 'aimlesstravelapp@gmail.com',
+            clientId: "251236372486-h3hrs47ks051t49r729co3jqm99jgepr.apps.googleusercontent.com",
+            clientSecret: "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",
+            refreshToken: "1//045C5U-alA1TNCgYIARAAGAQSNwF-L9Ir1A2meWgG1hpwCgCG70y1PVT0OoXlrTHtEM0nDoo3mOnPo34VM4vNOp81RcEsNZmTAU8"
         },
         tls: {
             rejectUnauthorized: false
