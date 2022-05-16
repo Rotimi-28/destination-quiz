@@ -97,9 +97,12 @@ app.post('/send', (req, res) => {
         secure: false,
         auth: {
             user: 'aimlesstravelapp@gmail.com'
+        },
+        tls: {
+            rejectUnauthorized: false
         }
         
-    })
+    });
 
     let mailOptions = {
         from: "aimlesstravelapp@gmail.com",
@@ -107,7 +110,7 @@ app.post('/send', (req, res) => {
         subject: 'Your results from Aimless Travel',
         text: 'Hello World',
         html: '<h1>Hello World</h1>'
-    }
+    };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
@@ -117,9 +120,9 @@ app.post('/send', (req, res) => {
 
         res.render('contact');
         
-    })
+    });
 
-})
+});
 
 //////////////////////////////////////////////////////////////
 
