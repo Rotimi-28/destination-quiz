@@ -4,7 +4,7 @@
 
 const express = require('express');
 
-const router = require('express').Router();
+
 
 // we import all of our routes with the /routes folder
 const routes = require('./controllers');
@@ -20,8 +20,7 @@ const sequelize = require('./config/connection');
 const path = require ('path');
 
 
-// require bodyparser and nodemailer for email
-const bodyParser = require('body-parser');
+
 const nodemailer = require('nodemailer');
 
 
@@ -79,63 +78,38 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// body parser middleware ///////
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 
-app.post('/send', (req, res) => {
-    // put body of email here. need to finish writing out the email
-    const output = `
-    <p>You have a new travel destination!</p>
-    <h3>You should go to: </h3>
-    <ul>
-    <li></li>
-    </ul>
-    <h3>Message</h3>
-    <p></p>
-    `;
 
-    
-    // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.mail.yahoo.com",
-    port: 587,
-    service:'Yahoo',
-    secure: false,
-    auth: {
-      user: 'bootcamp484@yahoo.com',
-      pass: 'ntivmuugvxrkitfi'
-    },
-    tls:{
-        rejectUnauthorized:false
-    }
-  });
+////////////////////////////////////
+const nodemailer = require('nodemailer');
 
-  const emailLink = document.getElementById('email')
-
-  // send mail with defined transport object
-  let sendResult = {
-    from: '"Aimless Destination" <bootcamp484@yahoo.com>', 
-    // not sure what to put for to send theyre entering this info on their own. could we make a span element and put it here?
-    to: emailLink.value.trim(), // list of receivers
-    subject: "Your Next Destination Awaits!",
-    text: "Hello world?", // plain text body
-    html: output //html body 
-  };
-
-  // send mail with defined transport object
-  transporter.sendMail(sendResult, (error, info) => {
-      if (error) {
-          return console.log(error);
-      } else{
-        console.log("Message sent: %s", info.messageId);
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      }
-      
-
-      res.render('contact', {msg:'views/contact.handlebars'})
-  })
+let transport = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 586,
+  secure: false,
+  auth: {
+    email: req.session.email
+  }
 });
+
+const mailOptions = {
+  from: 'aimlesstravel@gmail.com',
+  to: `${req.session.email}`,
+  subject: 'Aimless Travel Results',
+  html: `<h1>Thanks for using Aimless Travel!</h1></br><h2>Here are your results:</h2>`
+
+}
+
+transport.sendMail(mailOptions, function(err, info) {
+  if (err) {
+    console.log(err)
+  }
+  else {
+    console.log(info);
+  }
+})
+
+
 
 //////////////////////////////////////////////////////////////
 
