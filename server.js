@@ -5,7 +5,6 @@
 const express = require('express');
 
 
-
 // we import all of our routes with the /routes folder
 const routes = require('./controllers');
 
@@ -20,7 +19,7 @@ const sequelize = require('./config/connection');
 const path = require ('path');
 
 
-
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 
@@ -82,8 +81,45 @@ app.set('view engine', 'handlebars');
 
 ////////////////////////////////////
 
+//body-parser middleware
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 
+app.post('/send', (req, res) => {
+    const output = `
+        <p>Thank you for using AimlessTravel!</p>
+        <p>Here are your results</p>`
+    
+    let transporter = nodemailer.createTransport({
+        host: 'https://blooming-escarpment-07246.herokuapp.com/',
+        port: 587,
+        secure: false,
+        auth: {
+            user: 'aimlesstravelapp@gmail.com'
+        }
+        
+    })
+
+    let mailOptions = {
+        from: "aimlesstravelapp@gmail.com",
+        to: `gmail.com`,
+        subject: 'Your results from Aimless Travel',
+        text: 'Hello World',
+        html: '<h1>Hello World</h1>'
+    }
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log(info)
+
+        res.render('contact');
+        
+    })
+
+})
 
 //////////////////////////////////////////////////////////////
 
