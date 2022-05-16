@@ -81,33 +81,7 @@ app.set('view engine', 'handlebars');
 
 
 ////////////////////////////////////
-const nodemailer = require('nodemailer');
 
-let transport = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 586,
-  secure: false,
-  auth: {
-    email: req.session.email
-  }
-});
-
-const mailOptions = {
-  from: 'aimlesstravel@gmail.com',
-  to: `${req.session.email}`,
-  subject: 'Aimless Travel Results',
-  html: `<h1>Thanks for using Aimless Travel!</h1></br><h2>Here are your results:</h2>`
-
-}
-
-transport.sendMail(mailOptions, function(err, info) {
-  if (err) {
-    console.log(err)
-  }
-  else {
-    console.log(info);
-  }
-})
 
 
 
