@@ -507,7 +507,7 @@ const usaPush5 = function() {
     }
 }
 
-const usaPush4 = function() {
+const usaPush6 = function() {
     arrUSA.push('x')
     console.log('point for USA')
     this.style.background = "white";
