@@ -92,7 +92,7 @@ app.post('/send', (req, res) => {
         <p>Here are your results</p>`
     
     let transporter = nodemailer.createTransport({
-        host: 'https://blooming-escarpment-07246.herokuapp.com/',
+        host: 'https://destination-quiz-rotimi.herokuapp.com/',
         port: 587,
         secure: false,
         service: 'gmail',
